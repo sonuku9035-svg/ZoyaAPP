@@ -1,0 +1,12 @@
+workflows:
+  android-workflow:
+    name: Android Workflow
+    environment:
+      groups:
+        - android_creds
+    scripts:
+      - name: Build APK
+        script: |
+          echo "Building Android APK..."
+    artifacts:
+      - build/**/*.apk
